@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+}
+
+@import "./header";
+@import "./variables";
+@import "./main.scss";
+@import "./cdn";
+@import './popup.scss';
+@import './total.scss';
+@import "./todoItems.scss";
+@import "./allTasks.scss";
+
+
+
+html {
+  font-family: "Cardo", "Raleway", sans-serif;
+  font-size: 16px;
+}
+

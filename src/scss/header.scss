@@ -1,0 +1,43 @@
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  padding: 20px 0;
+}
+
+.header:after {
+  content: "";
+  display: block; 
+  height: 1px;
+  background-color: #cec7c7;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header__left {
+  font-size: 28px;
+  color: coral;
+}
+
+.header__center {
+  font-size: 24px;
+  color: #4497d9;
+}
+
+.header__right {
+  font-size: 24px;
+  color: grey;
+}
+
+.header_time {
+  display: block;
+}

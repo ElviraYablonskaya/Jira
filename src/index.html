@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <header class="header">
+        <div class="container">
+          <div class="header__left">
+            <h2 class="header__subtitle">ToDo</h2>
+          </div>
+          <div class="header__center">
+            <h1 class="header__title">What Can I Do Today</h1>
+          </div>
+          <div class="header__right">
+            <span class="header_date"></span>
+            <span class="header_time"></span>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="common">
+          <div class="make-todo">
+            <h3>Make ToDo</h3>
+            <div class="buttons">
+              <button class="make-todo_plus-button">
+                <i class="fa-sharp fa-solid fa-plus fa-xl"></i>
+              </button>
+              <button class="make-todo_trash-button"  data-array="makeToDo">
+                <i class="fa-solid fa-trash fa-xl"></i>
+              </button>
+            </div>
+            <div class="popup-overlay">
+              <div class="popup">
+                <h2 class="own-title">Fill in all required fields</h2>
+                <form id="todo-form" novalidate>
+                  <h4 class="title">Title:</h4>
+                  <input
+                    type="text"
+                    class="todo-input"
+                    name="title"
+                    placeholder="Enter title for your note"
+                    required
+                  />
+                  <h4 class="description">Description:</h4>
+                  <input
+                    type="text"
+                    class="todo-input-description"
+                    name="description"
+                    placeholder="Enter description for your note"
+                    required
+                  />
+                  <input
+                    type="text"
+                    class="todo-input-author"
+                    name="author"
+                    placeholder="Author"
+                    pattern="[a-zA-Z ]+"
+                    required
+                  />  
+
+                  <button class="cancel-todo-button" type="button">Cancel</button>
+                  <button class="create-todo-button" type="submit">Create</button>
+                </form>
+                <button class="close-button">&times;</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="in-progress">
+            <h3>In progress</h3>
+            <div class="buttons">
+              <button class="make-todo_trash-button" data-array="inProgress">
+                <i class="fa-solid fa-trash fa-xl"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="done">
+            <h3>Done</h3>
+            <div class="buttons">
+              <button class="make-todo_trash-button" data-array="done">
+                <i class="fa-solid fa-trash fa-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="total">
+          <div class="total_1">Total: <span class="total-count_1">0</span></div>
+          <div class="total_2">Total: <span class="total-count_2">0</span></div>
+          <div class="total_3">Total: <span class="total-count_3">0</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="taskContainer">
+        <div class="makeTodo-container"></div>
+        <div class="inProgress-container"></div>
+        <div class="done-container"></div>
+      </div>
+    </section>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>  
