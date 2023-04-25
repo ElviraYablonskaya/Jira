@@ -1,6 +1,5 @@
 import { deleteAllItems, deleteTask } from "./deleteButtons";
 import { updateTotalCounts } from "./total";
-import { createTask } from "./popup";
 import {
   shareMakeToDo,
   shareBackInProgress,
@@ -10,12 +9,10 @@ import {
 
 class Task {
   constructor(title, description, author, createdOn) {
-    {
-      (this.title = title),
-        (this.description = description),
-        (this.author = author),
-        (this.createdOn = createdOn);
-    }
+    this.title = title;
+    this.description = description;
+    this.author = author;
+    this.createdOn = createdOn;
   }
 }
 
@@ -76,7 +73,6 @@ function inProgress() {
   inProgress.forEach((todo) => {
     const taskElement = document.createElement("div");
     const createdDate = new Date(todo.createdOn).toLocaleDateString();
-  
 
     taskElement.classList.add("inProgress");
 
@@ -145,9 +141,6 @@ function makeToDo() {
     <div class="buttons_author">
     <div class="todo-author">${task.author}</div>
     <div class="buttons_item">
-    <button class="make-todoItem_edit-button">
-    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-    </button>
     <button class="make-todoItem_share-button">
     <i class="fa-solid fa-share fa-xl"></i>
     </button>
@@ -162,13 +155,8 @@ function makeToDo() {
     deleteTask(taskElement, makeToDo, makeToDoContainer, "makeToDo");
     shareMakeToDo(taskElement, makeToDo);
   });
-
 }
 
-
 deleteAllItems();
-
-const createTodoButton = document.querySelector(".create-todo-button");
-createTodoButton.addEventListener("click", createTask);
 
 displayTasks();
