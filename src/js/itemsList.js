@@ -7,6 +7,7 @@ import {
   shareBackDone,
 } from "./shareButtons";
 
+// represent a single to-do item.
 class Task {
   constructor(title, description, author, createdOn) {
     this.title = title;
@@ -16,12 +17,14 @@ class Task {
   }
 }
 
+// display all the to-do items in different states
 export function displayTasks() {
   done();
   inProgress();
   makeToDo();
 }
 
+// displays all the items that are marked as done.
 function done() {
   const doneContainer = document.querySelector(".done-container");
   doneContainer.innerHTML = "";
@@ -66,6 +69,7 @@ function done() {
   updateTotalCounts();
 }
 
+// displays all the items that are in progress
 function inProgress() {
   const inProgressContainer = document.querySelector(".inProgress-container");
   inProgressContainer.innerHTML = "";
@@ -113,6 +117,7 @@ function inProgress() {
   });
 }
 
+// displays all the items that are in makeToDo
 function makeToDo() {
   const makeToDoContainer = document.querySelector(".makeTodo-container");
   makeToDoContainer.innerHTML = "";
@@ -157,6 +162,7 @@ function makeToDo() {
   });
 }
 
+// clears all the items from localStorage and refreshes the page
 deleteAllItems();
 
 displayTasks();

@@ -1,3 +1,4 @@
+//updates the total number of tasks in each of the three categories: "makeToDo", "inProgress", and "done".
 export function updateTotalCounts() {
   const makeToDo = JSON.parse(localStorage.getItem("makeToDo")) || [];
   const inProgress = JSON.parse(localStorage.getItem("inProgress")) || [];

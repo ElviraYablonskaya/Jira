@@ -1,6 +1,8 @@
 import { updateTotalCounts } from "./total";
 import { displayTasks } from "./itemsList";
 
+
+// universal function for removing a specific button
 export function deleteTask(taskElement, tasks, taskContainer, taskStorageKey) {
   const trashButton = taskElement.querySelector(".make-todoItem_trash-button");
   const { title } = taskElement.querySelector(".todo-title");
@@ -16,7 +18,7 @@ export function deleteTask(taskElement, tasks, taskContainer, taskStorageKey) {
   });
 }
 
-
+// deleting all tasks from localStorage
 export function deleteAllItems() {
   const makeTodoTrashButtons = document.querySelectorAll(
     ".make-todo_trash-button"
